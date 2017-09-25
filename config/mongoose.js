@@ -7,7 +7,7 @@ module.exports = function() {
     });
 
   // require models
-// require('.')
+	require('./models/user.server.model');
 
 
     return db;

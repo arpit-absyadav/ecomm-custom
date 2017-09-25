@@ -10,6 +10,14 @@
 	            templateUrl: 'views/home.html',
 	            controller: 'mainController'
 	        })
+	        .when('/register', {
+	            templateUrl: 'views/pages/register.html',
+	            controller: 'registerController'
+	        })
+	        .when('/account', {
+	            templateUrl: 'views/pages/login.html',
+	            // controller: 'mainController'
+	        })
 	        
 	});
 
@@ -18,5 +26,6 @@
 	  console.log('from mainController');
 
 	});
+
 
 

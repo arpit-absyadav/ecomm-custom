@@ -24,6 +24,8 @@ module.exports = function() {
     });
 
 
+// user Routes
+    require('../app/routes/user.server.routes.js')(app);
  
 
 

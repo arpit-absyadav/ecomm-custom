@@ -1,0 +1,57 @@
+	<!-- registration-form -->
+<div class="registration-form">
+	<div class="container">
+	<div class="dreamcrub">
+			   	 <ul class="breadcrumbs">
+                    <li class="home">
+                       <a href="/" title="Go to Home Page">Home</a>&nbsp;
+                       <span>&gt;</span>
+                    </li>
+                    <li class="women">
+                       Registration
+                    </li>
+                </ul>
+                <ul class="previous">
+                	<li><a href="/">Back to Previous Page</a></li>
+                </ul>
+                <div class="clearfix"></div>
+			   </div>
+		<h2>Registration</h2>
+		<div class="registration-grids">
+			<div class="reg-form">
+				<div class="reg">
+					 <p>Welcome, please enter the following details to continue.</p>
+					 <p>If you have previously registered with us, <a href="#account">click here</a></p>
+					 <form id="userform" ng-submit="registerUser(user);">
+						
+						 <ul>
+							 <li class="text-info">Name: </li>
+							 <li><input ng-model="user.name" type="text" value=""></li>
+						 </ul>				 
+						<ul>
+							 <li class="text-info">Email: </li>
+							 <li><input ng-model="user.email" id="email" type="text" value=""></li>
+							 <p id="error"></p>
+						 </ul>
+						 <ul>
+							 <li class="text-info">Password: </li>
+							 <li><input  type="password" value=""></li>
+						 </ul>
+						 <ul>
+							 <li class="text-info">Re-enter Password:</li>
+							 <li><input ng-model="user.password" type="password" value=""></li>
+						 </ul>
+						 <ul>
+							 <li class="text-info">Mobile Number:</li>
+							 <li><input ng-model="mobile" type="text" value=""></li>
+						 </ul>						
+						 <input type="submit" value="REGISTER NOW">
+						 <p class="click">By clicking this button, you are agree to my  <a href="">Policy Terms and Conditions.</a></p> 
+					 </form>
+				 </div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- registration-form -->

@@ -7,7 +7,7 @@ module.exports = function() {
     });
 
   // require models
-
+// require('.')
 
 
     return db;

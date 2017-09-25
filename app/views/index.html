@@ -1,272 +1,293 @@
 <!DOCTYPE html>
-<html ng-app="liveMentor">
+<html ng-app="ecomm">
 <head>
-<meta charset="UTF-8">
-<title>ABS-SANGRAH</title>
-    <!-- View Port -->
- 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Ecomm-custom</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Eshop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<!-- for bootstrap working -->
+    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- //for bootstrap working -->
+<!-- cart -->
+    <script src="js/simpleCart.min.js"> </script>
+<!-- cart -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
-    <!-- CSS StyleSheets -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" ref="/bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
-
-
-    <link rel="stylesheet" type="text/css" href="/css/landingpage.css">
-
-
-    <!-- JavaScripts -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-
+     <!--ngControllers for config-->
+    <script src="ngControllers/ngAppConfig.js"></script>
 
 </head>
-
-<body  ng-controller="appController">
-	
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="#">ABS-SANGRAH</a>
+<body ng-controller="mainController">
+<!-- header-section-starts -->
+    <div class="header">
+        <div class="header-top-strip">
+            <div class="container">
+                <div class="header-top-left">
+                    <ul>
+                        <li><a href="account.html"><span class="glyphicon glyphicon-user"> </span>Login</a></li>
+                        <li><a href="register.html"><span class="glyphicon glyphicon-lock"> </span>Create an Account</a></li>           
+                    </ul>
+                </div>
+                <div class="header-right">
+                        <div class="cart box_1">
+                            <a href="checkout.html">
+                                <h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="images/bag.png" alt=""></h3>
+                            </a>    
+                            <p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+                            <div class="clearfix"> </div>
+                        </div>
+                </div>
+                <div class="clearfix"> </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a style="cursor:pointer" onclick="openNav()">Login / Signup</a>
-                    </li>   
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+    </div>
+    <!-- header-section-ends -->
+            <div class="banner-top">
+        <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <div class="logo">
+                    <h1><a href="index.html"><span>E</span> Comm-Shop</a></h1>
+                </div>
+        </div>
+        <!--/.navbar-header-->
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>NEW IN</h6>
+                                    <li><a href="products.html">New In Clothing</a></li>
+                                    <li><a href="products.html">New In Bags</a></li>
+                                    <li><a href="products.html">New In Shoes</a></li>
+                                    <li><a href="products.html">New In Watches</a></li>
+                                    <li><a href="products.html">New In Grooming</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>CLOTHING</h6>
+                                    <li><a href="products.html">Polos & Tees</a></li>
+                                    <li><a href="products.html">Casual Shirts</a></li>
+                                    <li><a href="products.html">Casual Trousers</a></li>
+                                    <li><a href="products.html">Jeans</a></li>
+                                    <li><a href="products.html">Shorts & 3/4th</a></li>
+                                    <li><a href="products.html">Formal Shirts</a></li>
+                                    <li><a href="products.html">Formal Trousers</a></li>
+                                    <li><a href="products.html">Suits & Blazers</a></li>
+                                    <li><a href="products.html">Track Wear</a></li>
+                                    <li><a href="products.html">Inner Wear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>WATCHES</h6>
+                                    <li><a href="products.html">Analog</a></li>
+                                    <li><a href="products.html">Chronograph</a></li>
+                                    <li><a href="products.html">Digital</a></li>
+                                    <li><a href="products.html">Watch Cases</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">women <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>NEW IN</h6>
+                                    <li><a href="products.html">New In Clothing</a></li>
+                                    <li><a href="products.html">New In Bags</a></li>
+                                    <li><a href="products.html">New In Shoes</a></li>
+                                    <li><a href="products.html">New In Watches</a></li>
+                                    <li><a href="products.html">New In Beauty</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>CLOTHING</h6>
+                                    <li><a href="products.html">Polos & Tees</a></li>
+                                    <li><a href="products.html">Casual Shirts</a></li>
+                                    <li><a href="products.html">Casual Trousers</a></li>
+                                    <li><a href="products.html">Jeans</a></li>
+                                    <li><a href="products.html">Shorts & 3/4th</a></li>
+                                    <li><a href="products.html">Formal Shirts</a></li>
+                                    <li><a href="products.html">Formal Trousers</a></li>
+                                    <li><a href="products.html">Suits & Blazers</a></li>
+                                    <li><a href="products.html">Track Wear</a></li>
+                                    <li><a href="products.html">Inner Wear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <h6>WATCHES</h6>
+                                    <li><a href="products.html">Analog</a></li>
+                                    <li><a href="products.html">Chronograph</a></li>
+                                    <li><a href="products.html">Digital</a></li>
+                                    <li><a href="products.html">Watch Cases</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-2">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <h6>NEW IN</h6>
+                                    <li><a href="products.html">New In Boys Clothing</a></li>
+                                    <li><a href="products.html">New In Girls Clothing</a></li>
+                                    <li><a href="products.html">New In Boys Shoes</a></li>
+                                    <li><a href="products.html">New In Girls Shoes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                 <ul class="multi-column-dropdown">
+                                    <h6>ACCESSORIES</h6>
+                                    <li><a href="products.html">Bags</a></li>
+                                    <li><a href="products.html">Watches</a></li>
+                                    <li><a href="products.html">Sun Glasses</a></li>
+                                    <li><a href="products.html">Jewellery</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </ul>
+                </li>
+                    <li><a href="typography.html">TYPO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <!--/.navbar-collapse-->
     </nav>
+    <!--/.navbar-->
+</div>
 
-    <!-- Form Overlay -->
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" style="z-index:100;" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6" style="background-color:#cbced3;height:1000px;">
+
+
+
+ <div id="main" style="width: 100%;">
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+
+        </div>
+
+
+
+    <!-- content-section-ends-here -->
+        <div class="news-letter">
+            <div class="container">
+                <div class="join">
+                    <h6>JOIN OUR MAILING LIST</h6>
+                    <div class="sub-left-right">
+                        <form>
+                            <input type="text" value="Enter Your Email Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email Here';}" />
+                            <input type="submit" value="SUBSCRIBE" />
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
             </div>
-            <div class="col-sm-6" style="background-color:#750a7f;height:1000px; padding-top:10%;">
-                <h3 style="color:white;">Get authentication using :</h3><br></hr><br>
-                <ul class="list-inline intro-social-buttons">
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                   
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                    </li>
-                     <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-tumblr-square fa-fw"></i> <span class="network-name">Tumblr</span></a>
-                    </li><br><br><br>
-                    
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook-official"></i> <span class="network-name">Facebook</span></a>
-                    </li><br><br><br>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-google-plus-square"></i> <span class="network-name">Google +</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-instagram"></i> <span class="network-name">Instagram</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-yahoo"></i> <span class="network-name">Yahoo</span></a>
-                    </li>
-                </ul>
-            </div>
+        </div>
+        <div class="footer">
+        <div class="container">
+         <div class="footer_top">
+            <div class="span_of_4">
+                <div class="col-md-3 span1_of_4">
+                    <h4>Shop</h4>
+                    <ul class="f_nav">
+                        <li><a href="#">new arrivals</a></li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">kids</a></li>
+                        <li><a href="#">brands</a></li>
+                        <li><a href="#">trends</a></li>
+                        <li><a href="#">sale</a></li>
+                        <li><a href="#">style videos</a></li>
+                    </ul>   
+                </div>
+                <div class="col-md-3 span1_of_4">
+                    <h4>help</h4>
+                    <ul class="f_nav">
+                        <li><a href="#">frequently asked  questions</a></li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">kids</a></li>
+                        <li><a href="#">brands</a></li>
+                    </ul>   
+                </div>
+                <div class="col-md-3 span1_of_4">
+                    <h4>account</h4>
+                    <ul class="f_nav">
+                        <li><a href="account.html">login</a></li>
+                        <li><a href="register.html">create an account</a></li>
+                        <li><a href="#">create wishlist</a></li>
+                        <li><a href="checkout.html">my shopping bag</a></li>
+                        <li><a href="#">brands</a></li>
+                        <li><a href="#">create wishlist</a></li>
+                    </ul>               
+                </div>
+                <div class="col-md-3 span1_of_4">
+                    <h4>popular</h4>
+                    <ul class="f_nav">
+                        <li><a href="#">new arrivals</a></li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">kids</a></li>
+                        <li><a href="#">brands</a></li>
+                        <li><a href="#">trends</a></li>
+                        <li><a href="#">sale</a></li>
+                        <li><a href="#">style videos</a></li>
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">brands</a></li>
+                    </ul>           
+                </div>
+                <div class="clearfix"></div>
+                </div>
+          </div>
+          <div class="cards text-center">
+                <img src="images/cards.jpg" alt="" />
+          </div>
+          <div class="copyright text-center">
+                <p>© 2015 Eshop. All Rights Reserved | Design by   <a href="http://w3layouts.com">  W3layouts</a></p>
           </div>
         </div>
-      </div>
-    </div>
-
-
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1 class="name">ABS-SANGRAH</h1>
-                        <h3>Your favorite books & music at one place</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-    <a  name="services"></a>
-    <a href="#">
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Go and get your music:</h2>
-                    <p class="lead">Music is an agreeable harmony for the honor of God and the permissible delights of the soul.” ― Johann Sebastian </p>
-                    <p class="lead"> “If Music is a Place — then Jazz is the City, Folk is the Wilderness, Rock is the Road, Classical is a Temple.” ― Vera Nazarian</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="/assets/images/music.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        </a>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <a href="#">
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Go and get your book:</h2>
-                    <p class="lead">There comes a time when you have to choose between turning the page and closing the book.</p>
-                    <p class="lead"> Great books help you understand, and they help you feel understood.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="/assets/images/Ebooks.png" alt="">
-                </div>
-            </div>
-
         </div>
 
-        <!-- /.container -->
 
-    </div>
-    </a>
-    <!-- /.content-section-b -->
-
-    
-
-    <a  name="contact"></a>
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect with </br>ABS-SANGRAH:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <link rel="stylesheet" type="text/css" href="/css/overlayForm.css">
-  
-
-
-    <script>
-    function openNav() {
-        document.getElementById("myNav").style.height = "100%";
-    }
-
-    function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
-    }
-    </script>
-
-
-    <script type="text/javascript" src = "/js/app.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
 </body>
-
 </html>

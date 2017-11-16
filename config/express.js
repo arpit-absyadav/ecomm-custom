@@ -20,7 +20,7 @@ module.exports = function() {
     app.use(bodyParser.json());
 
 
-    app.use(express.static('./app'))
+    app.use(express.static('./app'));
     app.use(express.static('./public'));
     app.use(express.static('./node_modules'));
     app.use('/bower_components', express.static('./bower_components'));
